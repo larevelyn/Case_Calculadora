@@ -1,35 +1,30 @@
-﻿using System;
-namespace Calculadora{
-
+﻿namespace Calculadora{
     public class Calculadora{
-        
-        public Operacoes calcular(Operacoes operacao){
-            
-            switch(operacao.operador){
-                case '+': operacao.resultado= soma(operacao);break;
-                case '-': operacao.resultado = subtracao(operacao);break;
-                case '*': operacao.resultado = multiplicacao(operacao);break;
-                case '/': operacao.resultado = divisao(operacao);break;
-                default: operacao.resultado = 0; break;
+        public Operacoes Calcular(Operacoes operacao){
+            switch (operacao.Operador){
+                case '+': operacao.Resultado = Soma(operacao); break;
+                case '-': operacao.Resultado = Subtracao(operacao); break;
+                case '*': operacao.Resultado = Multiplicacao(operacao); break;
+                case '/': operacao.Resultado = Divisao(operacao); break;
+                default: operacao.Resultado = 0; break;
             }
             return operacao;
         }
-        
-        public int soma(Operacoes operacao){
-            return operacao.valorA + operacao.valorB;
-        }
-        
-        public int subtracao(Operacoes operacao){
-            return operacao.valorA - operacao.valorB;
-        }
-        
-        public int multiplicacao(Operacoes operacao){
-            return operacao.valorA * operacao.valorB;
-        }
-        
-        public int divisao(Operacoes operacao){
-            return operacao.valorA / operacao.valorB;
+
+        public int Soma(Operacoes operacao){
+            return operacao.ValorA + operacao.ValorB;
         }
 
+        public int Subtracao(Operacoes operacao){
+            return operacao.ValorA - operacao.ValorB;
+        }
+
+        public int Multiplicacao(Operacoes operacao){
+            return operacao.ValorA * operacao.ValorB;
+        }
+
+        public int Divisao(Operacoes operacao){
+            return operacao.ValorA / operacao.ValorB;
+        }
     }
 }
